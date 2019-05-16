@@ -16,5 +16,11 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func waterPressed(_ sender: Any) {
+        performSegue(withIdentifier: "waterPage", sender: self)
+    }
+    @IBAction func leafPressed(_ sender: Any) {
+        performSegue(withIdentifier: "leafPage", sender: self)
+    }
 }
 

@@ -12,6 +12,13 @@
 		8B7FDBB1228BB7DA0072F2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B7FDBAF228BB7DA0072F2A6 /* Main.storyboard */; };
 		8B7FDBB3228BB7DC0072F2A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B7FDBB2228BB7DC0072F2A6 /* Assets.xcassets */; };
 		8B7FDBB6228BB7DC0072F2A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B7FDBB4228BB7DC0072F2A6 /* LaunchScreen.storyboard */; };
+		8B7FDC04228D33380072F2A6 /* LeafViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDC03228D33380072F2A6 /* LeafViewController.swift */; };
+		8B7FDC15228D38260072F2A6 /* Water Drop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8B7FDC10228D38250072F2A6 /* Water Drop.wav */; };
+		8B7FDC16228D38260072F2A6 /* Rain Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8B7FDC11228D38250072F2A6 /* Rain Sound.wav */; };
+		8B7FDC17228D38260072F2A6 /* Forest Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8B7FDC12228D38250072F2A6 /* Forest Sound.wav */; };
+		8B7FDC18228D38260072F2A6 /* Wind Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8B7FDC13228D38250072F2A6 /* Wind Sound.wav */; };
+		8B7FDC19228D38260072F2A6 /* Sea Wave.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8B7FDC14228D38260072F2A6 /* Sea Wave.wav */; };
+		8B7FDC1B228D3D4D0072F2A6 /* waterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDC1A228D3D4D0072F2A6 /* waterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		8B7FDBB2228BB7DC0072F2A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B7FDBB5228BB7DC0072F2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B7FDBB7228BB7DC0072F2A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B7FDC03228D33380072F2A6 /* LeafViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafViewController.swift; sourceTree = "<group>"; };
+		8B7FDC10228D38250072F2A6 /* Water Drop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Water Drop.wav"; sourceTree = "<group>"; };
+		8B7FDC11228D38250072F2A6 /* Rain Sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Rain Sound.wav"; sourceTree = "<group>"; };
+		8B7FDC12228D38250072F2A6 /* Forest Sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Forest Sound.wav"; sourceTree = "<group>"; };
+		8B7FDC13228D38250072F2A6 /* Wind Sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Wind Sound.wav"; sourceTree = "<group>"; };
+		8B7FDC14228D38260072F2A6 /* Sea Wave.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Sea Wave.wav"; sourceTree = "<group>"; };
+		8B7FDC1A228D3D4D0072F2A6 /* waterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +52,7 @@
 		8B7FDB9F228BB7DA0072F2A6 = {
 			isa = PBXGroup;
 			children = (
+				8B7FDC05228D373F0072F2A6 /* soundEffect */,
 				8B7FDBAA228BB7DA0072F2A6 /* NanoChallenge1 */,
 				8B7FDBA9228BB7DA0072F2A6 /* Products */,
 			);
@@ -57,11 +72,25 @@
 				8B7FDBAB228BB7DA0072F2A6 /* AppDelegate.swift */,
 				8B7FDBAD228BB7DA0072F2A6 /* ViewController.swift */,
 				8B7FDBAF228BB7DA0072F2A6 /* Main.storyboard */,
+				8B7FDC1A228D3D4D0072F2A6 /* waterViewController.swift */,
+				8B7FDC03228D33380072F2A6 /* LeafViewController.swift */,
 				8B7FDBB2228BB7DC0072F2A6 /* Assets.xcassets */,
 				8B7FDBB4228BB7DC0072F2A6 /* LaunchScreen.storyboard */,
 				8B7FDBB7228BB7DC0072F2A6 /* Info.plist */,
 			);
 			path = NanoChallenge1;
+			sourceTree = "<group>";
+		};
+		8B7FDC05228D373F0072F2A6 /* soundEffect */ = {
+			isa = PBXGroup;
+			children = (
+				8B7FDC12228D38250072F2A6 /* Forest Sound.wav */,
+				8B7FDC11228D38250072F2A6 /* Rain Sound.wav */,
+				8B7FDC14228D38260072F2A6 /* Sea Wave.wav */,
+				8B7FDC10228D38250072F2A6 /* Water Drop.wav */,
+				8B7FDC13228D38250072F2A6 /* Wind Sound.wav */,
+			);
+			path = soundEffect;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +152,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B7FDBB6228BB7DC0072F2A6 /* LaunchScreen.storyboard in Resources */,
+				8B7FDC18228D38260072F2A6 /* Wind Sound.wav in Resources */,
 				8B7FDBB3228BB7DC0072F2A6 /* Assets.xcassets in Resources */,
+				8B7FDC17228D38260072F2A6 /* Forest Sound.wav in Resources */,
+				8B7FDC19228D38260072F2A6 /* Sea Wave.wav in Resources */,
+				8B7FDC15228D38260072F2A6 /* Water Drop.wav in Resources */,
+				8B7FDC16228D38260072F2A6 /* Rain Sound.wav in Resources */,
 				8B7FDBB1228BB7DA0072F2A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +170,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B7FDBAE228BB7DA0072F2A6 /* ViewController.swift in Sources */,
+				8B7FDC04228D33380072F2A6 /* LeafViewController.swift in Sources */,
+				8B7FDC1B228D3D4D0072F2A6 /* waterViewController.swift in Sources */,
 				8B7FDBAC228BB7DA0072F2A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
