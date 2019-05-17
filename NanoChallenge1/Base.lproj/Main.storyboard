@@ -158,6 +158,10 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="MiI-ZU-sQP" appends="YES" id="lSk-td-d2I"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -165,6 +169,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rkS-hn-HzX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="MiI-ZU-sQP"/>
             </objects>
             <point key="canvasLocation" x="-1519" y="834"/>
         </scene>
@@ -197,6 +202,10 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="ua7-EY-cMI" appends="YES" id="Ygk-69-ypn"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -207,6 +216,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ms-tv-g2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="ua7-EY-cMI"/>
             </objects>
             <point key="canvasLocation" x="-2219" y="834"/>
         </scene>
@@ -235,6 +245,10 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="mUe-Rp-k4y" appends="YES" id="rRl-nc-Ke8"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -242,6 +256,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnh-3Q-J4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="mUe-Rp-k4y"/>
             </objects>
             <point key="canvasLocation" x="-688" y="834"/>
         </scene>
@@ -270,6 +285,10 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="QnJ-KX-gGQ" appends="YES" id="3CW-Gj-UXm"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -277,6 +296,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JC0-cD-eFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="QnJ-KX-gGQ"/>
             </objects>
             <point key="canvasLocation" x="12" y="834"/>
         </scene>
@@ -312,13 +332,21 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uaU-gv-GXd" appends="YES" id="LCC-hA-Gu0"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Apb-hS-bSe"/>
                     </view>
+                    <connections>
+                        <outlet property="backgorundWater" destination="I1F-Ox-6sR" id="ulV-52-NWw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HgH-zV-Uku" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="uaU-gv-GXd"/>
             </objects>
             <point key="canvasLocation" x="1459" y="834"/>
         </scene>
@@ -348,22 +376,41 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rub. or Shake." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNu-r7-2fc">
                                         <rect key="frame" x="130" y="433" width="155" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="QYE-9T-eSo" appends="YES" id="njs-3j-xhc"/>
+                                            <outletCollection property="gestureRecognizers" destination="QYE-9T-eSo" appends="YES" id="O4J-P8-XlS"/>
+                                        </connections>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="QYE-9T-eSo" appends="YES" id="PFB-29-KaJ"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="bmf-yY-SYB"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="QYE-9T-eSo" appends="YES" id="c1v-Lg-Wia"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="backgroundShake" destination="2Qp-eC-kON" id="Gof-2o-yt2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Bw-TY-jm4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="QYE-9T-eSo">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="backGesture:" destination="d55-tV-Kyn" id="U1r-yp-1Vw"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="788" y="834"/>
         </scene>
