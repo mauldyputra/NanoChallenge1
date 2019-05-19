@@ -14,10 +14,15 @@ class LeafViewController: UIViewController {
     @IBOutlet weak var backgroundShake: UIView!
     
     var forestSound: AVAudioPlayer?
+    var screenEdgeRecognizer: UIScreenEdgePanGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        screenEdgeRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(LeafViewController.back(_:)))
+        screenEdgeRecognizer.edges = .left
+        view.addGestureRecognizer(screenEdgeRecognizer)
         
     }
     
@@ -39,6 +44,16 @@ class LeafViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func back(_ sender: UIScreenEdgePanGestureRecognizer) {
+        if sender.state == .ended{
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func btnBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

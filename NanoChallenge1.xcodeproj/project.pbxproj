@@ -19,6 +19,9 @@
 		8B7FDC18228D38260072F2A6 /* Wind Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8B7FDC13228D38250072F2A6 /* Wind Sound.wav */; };
 		8B7FDC19228D38260072F2A6 /* Sea Wave.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8B7FDC14228D38260072F2A6 /* Sea Wave.wav */; };
 		8B7FDC1B228D3D4D0072F2A6 /* waterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDC1A228D3D4D0072F2A6 /* waterViewController.swift */; };
+		8BF02E0F229192F500B42482 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF02E0E229192F500B42482 /* Emitter.swift */; };
+		8BF02E142291B34600B42482 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF02E132291B34600B42482 /* CoreMotion.framework */; };
+		8BF02E1A2291C0F300B42482 /* RainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF02E192291C0F300B42482 /* RainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		8B7FDC13228D38250072F2A6 /* Wind Sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Wind Sound.wav"; sourceTree = "<group>"; };
 		8B7FDC14228D38260072F2A6 /* Sea Wave.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Sea Wave.wav"; sourceTree = "<group>"; };
 		8B7FDC1A228D3D4D0072F2A6 /* waterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waterViewController.swift; sourceTree = "<group>"; };
+		8BF02E0E229192F500B42482 /* Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
+		8BF02E132291B34600B42482 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		8BF02E192291C0F300B42482 /* RainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BF02E142291B34600B42482 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +62,7 @@
 				8B7FDC05228D373F0072F2A6 /* soundEffect */,
 				8B7FDBAA228BB7DA0072F2A6 /* NanoChallenge1 */,
 				8B7FDBA9228BB7DA0072F2A6 /* Products */,
+				8BF02E122291B34500B42482 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,11 +80,13 @@
 				8B7FDBAB228BB7DA0072F2A6 /* AppDelegate.swift */,
 				8B7FDBAD228BB7DA0072F2A6 /* ViewController.swift */,
 				8B7FDBAF228BB7DA0072F2A6 /* Main.storyboard */,
+				8BF02E192291C0F300B42482 /* RainViewController.swift */,
 				8B7FDC1A228D3D4D0072F2A6 /* waterViewController.swift */,
 				8B7FDC03228D33380072F2A6 /* LeafViewController.swift */,
 				8B7FDBB2228BB7DC0072F2A6 /* Assets.xcassets */,
 				8B7FDBB4228BB7DC0072F2A6 /* LaunchScreen.storyboard */,
 				8B7FDBB7228BB7DC0072F2A6 /* Info.plist */,
+				8BF02E0E229192F500B42482 /* Emitter.swift */,
 			);
 			path = NanoChallenge1;
 			sourceTree = "<group>";
@@ -91,6 +101,14 @@
 				8B7FDC13228D38250072F2A6 /* Wind Sound.wav */,
 			);
 			path = soundEffect;
+			sourceTree = "<group>";
+		};
+		8BF02E122291B34500B42482 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BF02E132291B34600B42482 /* CoreMotion.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +187,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BF02E1A2291C0F300B42482 /* RainViewController.swift in Sources */,
 				8B7FDBAE228BB7DA0072F2A6 /* ViewController.swift in Sources */,
 				8B7FDC04228D33380072F2A6 /* LeafViewController.swift in Sources */,
 				8B7FDC1B228D3D4D0072F2A6 /* waterViewController.swift in Sources */,
+				8BF02E0F229192F500B42482 /* Emitter.swift in Sources */,
 				8B7FDBAC228BB7DA0072F2A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

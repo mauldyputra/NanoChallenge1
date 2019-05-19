@@ -76,7 +76,12 @@ class waterViewController: UIViewController {
     func animateImage(){
         addRippleEffect(to: backgorundWater)
     }
-
+    
+    
+    @IBAction func btnBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
