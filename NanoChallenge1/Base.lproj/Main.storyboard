@@ -25,7 +25,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6N-7h-cM1">
                                         <rect key="frame" x="88" y="249" width="95" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="btnForest" image="forest"/>
+                                        <state key="normal" title="btnForest" image="Forest-1"/>
                                         <connections>
                                             <segue destination="dvL-pa-daL" kind="show" id="2yK-xE-xeD"/>
                                         </connections>
@@ -33,7 +33,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azZ-wH-f8K">
                                         <rect key="frame" x="238" y="249" width="95" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="btnBeach" image="beach"/>
+                                        <state key="normal" title="btnBeach" image="Beach1"/>
                                         <connections>
                                             <segue destination="6h1-fv-fKH" kind="show" id="pex-dI-7Sr"/>
                                         </connections>
@@ -88,7 +88,7 @@
         <!--Beach-->
         <scene sceneID="9I8-PS-X7k">
             <objects>
-                <viewController title="Beach" id="6h1-fv-fKH" sceneMemberID="viewController">
+                <viewController title="Beach" id="6h1-fv-fKH" customClass="BeachViewController" customModule="NanoChallenge1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ri5-j7-HRs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,10 +97,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beach" translatesAutoresizingMaskIntoConstraints="NO" id="QqE-Bk-yfS">
-                                        <rect key="frame" x="164" y="52" width="87" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blow." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wq8-eq-1Ur">
                                         <rect key="frame" x="178" y="433" width="59" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -108,6 +104,31 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="__________________________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3c-ca-QRZ">
+                                        <rect key="frame" x="-5" y="55" width="419" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdt-lu-pN7">
+                                        <rect key="frame" x="8" y="43" width="30" height="15"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                        <state key="normal" title="&lt;">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnBack:" destination="1cd-fg-Gng" eventType="touchUpInside" id="3LL-G8-Vaf"/>
+                                            <action selector="btnBack:" destination="CZO-J1-i00" eventType="touchUpInside" id="baz-Mb-qcY"/>
+                                            <action selector="btnBack:" destination="d55-tV-Kyn" eventType="touchUpInside" id="lyS-hz-AoB"/>
+                                            <action selector="btnBack:" destination="6h1-fv-fKH" eventType="touchUpInside" id="rL4-Zb-Ec8"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Beach1" translatesAutoresizingMaskIntoConstraints="NO" id="QqE-Bk-yfS">
+                                        <rect key="frame" x="164" y="72" width="87" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
@@ -123,12 +144,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rkS-hn-HzX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="MiI-ZU-sQP"/>
             </objects>
-            <point key="canvasLocation" x="-1519" y="834"/>
+            <point key="canvasLocation" x="-290" y="875"/>
         </scene>
         <!--Forest-->
         <scene sceneID="ZaY-5C-1mw">
             <objects>
-                <viewController title="Forest" id="dvL-pa-daL" sceneMemberID="viewController">
+                <viewController title="Forest" id="dvL-pa-daL" customClass="ForestViewController" customModule="NanoChallenge1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ox7-Wl-XHM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,10 +162,40 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forest" translatesAutoresizingMaskIntoConstraints="NO" id="o6f-gU-NWI">
-                                                <rect key="frame" x="164" y="52" width="87" height="100"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="__________________________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsz-EQ-kSo">
+                                                <rect key="frame" x="-5" y="55" width="419" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyr-5p-nIM">
+                                                <rect key="frame" x="8" y="43" width="30" height="15"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                                <state key="normal" title="&lt;">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnBack:" destination="dvL-pa-daL" eventType="touchUpInside" id="Kyn-9g-kX0"/>
+                                                    <action selector="btnBack:" destination="6h1-fv-fKH" eventType="touchUpInside" id="Oq1-97-STH"/>
+                                                    <action selector="btnBack:" destination="CZO-J1-i00" eventType="touchUpInside" id="ViU-HI-44b"/>
+                                                    <action selector="btnBack:" destination="d55-tV-Kyn" eventType="touchUpInside" id="azm-Rf-GCy"/>
+                                                    <action selector="btnBack:" destination="1cd-fg-Gng" eventType="touchUpInside" id="hse-gd-2sn"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Forest-1" translatesAutoresizingMaskIntoConstraints="NO" id="o6f-gU-NWI">
+                                                <rect key="frame" x="161" y="72" width="87" height="100"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shake." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8f-dV-xu8">
+                                                <rect key="frame" x="170" y="433" width="74" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <gestureRecognizers/>
@@ -163,7 +214,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ms-tv-g2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="ua7-EY-cMI"/>
             </objects>
-            <point key="canvasLocation" x="-2219" y="834"/>
+            <point key="canvasLocation" x="-938" y="875"/>
         </scene>
         <!--Rain-->
         <scene sceneID="jh5-2t-B7S">
@@ -219,12 +270,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Pf0-iQ-cPR"/>
                     </view>
+                    <connections>
+                        <outlet property="background" destination="PyL-A0-GnO" id="EBp-MN-ACe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnh-3Q-J4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="CZO-J1-i00" userLabel="Exit" sceneMemberID="exit"/>
                 <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="mUe-Rp-k4y"/>
             </objects>
-            <point key="canvasLocation" x="-688" y="834"/>
+            <point key="canvasLocation" x="343" y="875"/>
         </scene>
         <!--Cloud-->
         <scene sceneID="HYM-lO-i0q">
@@ -257,7 +311,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JC0-cD-eFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="QnJ-KX-gGQ"/>
             </objects>
-            <point key="canvasLocation" x="30" y="1643"/>
+            <point key="canvasLocation" x="2330" y="875"/>
         </scene>
         <!--Water-->
         <scene sceneID="Swh-sg-R11">
@@ -319,7 +373,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HgH-zV-Uku" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="uaU-gv-GXd"/>
             </objects>
-            <point key="canvasLocation" x="571" y="834"/>
+            <point key="canvasLocation" x="1651" y="875"/>
         </scene>
         <!--Leaf-->
         <scene sceneID="UXp-VV-7Ut">
@@ -337,18 +391,6 @@
                                         <rect key="frame" x="158" y="90" width="98" height="87"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rub. or Shake." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNu-r7-2fc">
-                                        <rect key="frame" x="130" y="433" width="155" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <gestureRecognizers/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="QYE-9T-eSo" appends="YES" id="njs-3j-xhc"/>
-                                            <outletCollection property="gestureRecognizers" destination="QYE-9T-eSo" appends="YES" id="O4J-P8-XlS"/>
-                                        </connections>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aok-n9-1wU">
                                         <rect key="frame" x="8" y="46" width="30" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -366,6 +408,18 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNu-r7-2fc">
+                                        <rect key="frame" x="171" y="433" width="73" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="QYE-9T-eSo" appends="YES" id="njs-3j-xhc"/>
+                                            <outletCollection property="gestureRecognizers" destination="QYE-9T-eSo" appends="YES" id="O4J-P8-XlS"/>
+                                        </connections>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -394,14 +448,14 @@
                     </connections>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-100" y="834"/>
+            <point key="canvasLocation" x="983" y="875"/>
         </scene>
     </scenes>
     <resources>
-        <image name="beach" width="512" height="512"/>
+        <image name="Beach1" width="257" height="257"/>
+        <image name="Forest-1" width="257" height="257"/>
         <image name="cloud" width="512" height="512"/>
         <image name="drop" width="512" height="512"/>
-        <image name="forest" width="512" height="512"/>
         <image name="heavy" width="512" height="512"/>
         <image name="leaf" width="512" height="512"/>
     </resources>
