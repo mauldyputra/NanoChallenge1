@@ -9,13 +9,51 @@
 import UIKit
 import AVFoundation
 import CoreAudio
+import LocalAuthentication
 
 class BeachViewController: UIViewController {
 
+    @IBOutlet weak var scanFID: UIButton!
+    
     var beachSound: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        beginFaceID()
+    }
+    
+    
+    @IBAction func scanFaceID(_ sender: Any) {
+        scanFID.addTarget(self, action: #selector(handleFaceId), for: .touchUpInside)
+    }
+    
+    @objc fileprivate func handleFaceId(){
+        let context = LAContext()
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an access to the door we need to check your FaceID") { (wasSuccessful, error) in
+                if wasSuccessful{
+//                    self.dismiss(animated: true, completion: nil)
+                    self.playSound()
+                }else{
+                    Alert.showBasic(title: "Incorrect credentials", msg: "Please try again", vc: self)
+                }
+            }
+        }else{
+            Alert.showBasic(title: "FaceID not configured", msg: "Please go to settings", vc: self)
+        }
+    }
+    
+    class Alert{
+        class func showBasic(title: String, msg: String, vc: UIViewController){
+            let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            vc.present(alert, animated: true)
+        }
+    }
+    
+    func playSound(){
         let path = Bundle.main.path(forResource: "Sea Waves.wav", ofType:nil)!
         let url = URL(fileURLWithPath: path)
         
@@ -30,15 +68,4 @@ class BeachViewController: UIViewController {
     @IBAction func btnBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

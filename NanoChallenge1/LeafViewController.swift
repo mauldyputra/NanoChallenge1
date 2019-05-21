@@ -46,54 +46,45 @@ class LeafViewController: UIViewController {
         
         if (sender.direction == .left) {
             print("Swipe Left")
-            let path = Bundle.main.path(forResource: "Leaf Crunch.wav", ofType:nil)!
-            let url = URL(fileURLWithPath: path)
-            
-            do {
-                forestSound = try AVAudioPlayer(contentsOf: url)
-                forestSound?.play()
-            } catch {
-                print("Couldn't load file ☹️")// couldn't load file :(
-            }
+            playSound()
+            leafDown()
         }
         
         if (sender.direction == .right) {
             print("Swipe Right")
-            let path = Bundle.main.path(forResource: "Leaf Crunch.wav", ofType:nil)!
-            let url = URL(fileURLWithPath: path)
-            
-            do {
-                forestSound = try AVAudioPlayer(contentsOf: url)
-                forestSound?.play()
-            } catch {
-                print("Couldn't load file ☹️")// couldn't load file :(
-            }
+            playSound()
+            leafDown()
         }
         
         if (sender.direction == .up) {
             print("Swipe Up")
-            let path = Bundle.main.path(forResource: "Leaf Crunch.wav", ofType:nil)!
-            let url = URL(fileURLWithPath: path)
-            
-            do {
-                forestSound = try AVAudioPlayer(contentsOf: url)
-                forestSound?.play()
-            } catch {
-                print("Couldn't load file ☹️")// couldn't load file :(
-            }
+            playSound()
+            leafDown()
         }
         
         if (sender.direction == .down) {
             print("Swipe Down")
-            let path = Bundle.main.path(forResource: "Leaf Crunch.wav", ofType:nil)!
-            let url = URL(fileURLWithPath: path)
-            
-            do {
-                forestSound = try AVAudioPlayer(contentsOf: url)
-                forestSound?.play()
-            } catch {
-                print("Couldn't load file ☹️")// couldn't load file :(
-            }
+            playSound()
+            leafDown()
+        }
+    }
+    
+    func leafDown(){
+        let emitter = Emitter.get(with: UIImage(named: "Leaf-1.png")!)
+        emitter.position = CGPoint(x: view.frame.width / 2, y: 50)
+        emitter.emitterSize = CGSize(width: view.frame.width, height: 2)
+        view.layer.addSublayer(emitter)
+    }
+    
+    func playSound(){
+        let path = Bundle.main.path(forResource: "Leaf Crunch.wav", ofType:nil)!
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            forestSound = try AVAudioPlayer(contentsOf: url)
+            forestSound?.play()
+        } catch {
+            print("Couldn't load file ☹️")// couldn't load file :(
         }
     }
     

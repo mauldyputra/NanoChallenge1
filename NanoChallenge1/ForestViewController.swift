@@ -17,6 +17,7 @@ class ForestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        screenEdgeRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(RainViewController.back(_:)))
         screenEdgeRecognizer.edges = .left
         view.addGestureRecognizer(screenEdgeRecognizer)
     }
@@ -39,6 +40,10 @@ class ForestViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func btnBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
