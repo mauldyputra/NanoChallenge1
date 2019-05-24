@@ -30,6 +30,7 @@ class RainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        gyro()
         screenEdgeRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(RainViewController.back(_:)))
         screenEdgeRecognizer.edges = .left
         view.addGestureRecognizer(screenEdgeRecognizer)
@@ -39,7 +40,9 @@ class RainViewController: UIViewController {
         return 180 / .pi * radians
     }
     override func viewDidAppear(_ animated: Bool) {
-        gyro()
+//        gyro()
+//        rainDown()
+//        playSound()
     }
     
     func gyro(){
@@ -58,32 +61,37 @@ class RainViewController: UIViewController {
         
         if pitch < 15 {
             lay = false
-            print(seconds)
+//            print(seconds)
             if seconds <= 600{
                 seconds = 0
                 customAnim.fadeIn(view: background)
             }
-            for mUI in listCircle{
-                customAnim.fadeOut(view: mUI)
-            }
+//            for mUI in listCircle{
+//                customAnim.fadeOut(view: mUI)
+//            }
             stopSound()
         }else if pitch > 14{
-            print(seconds)
-            customAnim.fadeOut(view: background)
+//            print(seconds)
+//            customAnim.fadeOut(view: background)
             if !lay{
-                for mUI in listCircle{
-                    if seconds <= 600 {
-                        seconds = 0
-                        customAnim.fadeIn(view: mUI)
-                        customAnim.springMovement(view: mUI)
-                    }
+//                for mUI in listCircle{
+//                    if seconds <= 600 {
+//                        seconds = 0
+//                        customAnim.fadeIn(view: mUI)
+//                        customAnim.springMovement(view: mUI)
+//                    }
+//                }
+                for _ in 0...600{
+                    createBuble()
                 }
+                rainDown()
+                playSound()
                 lay = true
             }
-            for _ in 0...600{
-                createBuble()
-            }
-            playSound()
+//            for _ in 0...600{
+//                createBuble()
+//            }
+//            playSound()
         }
     }
     @objc func updateTimer() {
@@ -114,6 +122,7 @@ class RainViewController: UIViewController {
         
         do {
             rainSound = try AVAudioPlayer(contentsOf: url)
+            rainSound?.numberOfLoops = 10
             rainSound?.play()
         } catch {
             print("Couldn't load file ☹️")// couldn't load file :(
@@ -126,7 +135,7 @@ class RainViewController: UIViewController {
         
         do {
             rainSound = try AVAudioPlayer(contentsOf: url)
-            rainSound?.pause()
+            rainSound?.stop()
         } catch {
             print("Couldn't load file ☹️")// couldn't load file :(
         }

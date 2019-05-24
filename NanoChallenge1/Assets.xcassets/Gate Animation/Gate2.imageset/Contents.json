@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Gate@1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Gate2@2x.png",
       "scale" : "2x"
     },
     {

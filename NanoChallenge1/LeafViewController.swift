@@ -13,7 +13,7 @@ class LeafViewController: UIViewController {
 
     @IBOutlet weak var backgroundShake: UIView!
     
-    var forestSound: AVAudioPlayer?
+    var leafSound: AVAudioPlayer?
     var screenEdgeRecognizer: UIScreenEdgePanGestureRecognizer!
     
     override func viewDidLoad() {
@@ -81,8 +81,9 @@ class LeafViewController: UIViewController {
         let url = URL(fileURLWithPath: path)
         
         do {
-            forestSound = try AVAudioPlayer(contentsOf: url)
-            forestSound?.play()
+            leafSound = try AVAudioPlayer(contentsOf: url)
+            leafSound?.numberOfLoops = 3
+            leafSound?.play()
         } catch {
             print("Couldn't load file ☹️")// couldn't load file :(
         }
