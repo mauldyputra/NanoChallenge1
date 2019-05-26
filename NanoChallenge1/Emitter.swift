@@ -49,7 +49,7 @@ class Emitter{
         cell.contents = image.cgImage
         cell.birthRate = 1
         cell.lifetime = 50
-        cell.velocity = CGFloat(5000)
+        cell.velocity = CGFloat(100)
         cell.emissionLongitude = (135 * (.pi/180))
         cell.emissionRange = (45 * (.pi/180))
         

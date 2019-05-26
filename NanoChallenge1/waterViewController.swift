@@ -14,11 +14,16 @@ class waterViewController: UIViewController {
     
     var waterSound: AVAudioPlayer?
     @IBOutlet weak var backgorundWater: UIView!
+    var screenEdgeRecognizer: UIScreenEdgePanGestureRecognizer!
     let circle = UIView(frame: CGRect(x: 100, y: 250, width: 100, height: 100))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        screenEdgeRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(RainViewController.back(_:)))
+        screenEdgeRecognizer.edges = .left
+        view.addGestureRecognizer(screenEdgeRecognizer)
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
 //        view.addGestureRecognizer(tap)
         tap.delegate = self as? UIGestureRecognizerDelegate
@@ -61,6 +66,10 @@ class waterViewController: UIViewController {
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
 //            animateImage()
         }
+    }
+    
+    @IBAction func back(_ sender: UIScreenEdgePanGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func btnBack(_ sender: Any) {

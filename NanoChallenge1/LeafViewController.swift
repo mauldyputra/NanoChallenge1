@@ -114,6 +114,10 @@ class LeafViewController: UIViewController {
 //        }
 //    }
     
+    @IBAction func back(_ sender: UIScreenEdgePanGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func btnBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

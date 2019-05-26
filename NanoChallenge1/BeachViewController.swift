@@ -15,6 +15,7 @@ class BeachViewController: UIViewController {
 
     @IBOutlet weak var scanFID: UIButton!
     @IBOutlet weak var gateView: UIImageView!
+    var screenEdgeRecognizer: UIScreenEdgePanGestureRecognizer!
     
     var beachSound: AVAudioPlayer?
     
@@ -23,6 +24,9 @@ class BeachViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        screenEdgeRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(RainViewController.back(_:)))
+        screenEdgeRecognizer.edges = .left
+        view.addGestureRecognizer(screenEdgeRecognizer)
         for i in 0..<imagesNames.count{
             images.append(UIImage(named: imagesNames[i])!)
         }
@@ -78,6 +82,11 @@ class BeachViewController: UIViewController {
             print("Couldn't load file ☹️")// couldn't load file :(
         }
     }
+    
+    @IBAction func back(_ sender: UIScreenEdgePanGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     @IBAction func btnBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)

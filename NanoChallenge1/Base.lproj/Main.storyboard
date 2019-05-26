@@ -38,30 +38,30 @@
                                             <segue destination="6h1-fv-fKH" kind="show" id="pex-dI-7Sr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ja2-5T-U3p">
-                                        <rect key="frame" x="234" y="531" width="95" height="100"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjR-79-u9J">
+                                        <rect key="frame" x="75" y="510" width="133" height="140"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="btnWater" image="drop"/>
+                                        <state key="normal" title="btnLeaf" image="LeafIcon"/>
                                         <connections>
-                                            <action selector="waterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Cx-sd-JM1"/>
-                                            <segue destination="UMH-uG-Icb" kind="show" identifier="waterPage" id="y4r-IP-FxD"/>
+                                            <action selector="leafPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TgI-rd-tcz"/>
+                                            <segue destination="d55-tV-Kyn" kind="show" identifier="leafPage" id="Xgd-bk-kba"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bn9-Dm-sIb">
-                                        <rect key="frame" x="160" y="254" width="95" height="100"/>
+                                        <rect key="frame" x="138" y="248" width="139" height="147"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="btnRain" image="heavy"/>
+                                        <state key="normal" title="btnRain" image="RainIcon"/>
                                         <connections>
                                             <segue destination="1cd-fg-Gng" kind="show" id="b9n-ag-nSS"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjR-79-u9J">
-                                        <rect key="frame" x="84" y="531" width="95" height="100"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ja2-5T-U3p">
+                                        <rect key="frame" x="216" y="511" width="132" height="139"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="btnLeaf" image="leaf"/>
+                                        <state key="normal" title="btnWater" image="WaterIcon"/>
                                         <connections>
-                                            <action selector="leafPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TgI-rd-tcz"/>
-                                            <segue destination="d55-tV-Kyn" kind="show" identifier="leafPage" id="Xgd-bk-kba"/>
+                                            <action selector="waterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Cx-sd-JM1"/>
+                                            <segue destination="UMH-uG-Icb" kind="show" identifier="waterPage" id="y4r-IP-FxD"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -145,7 +145,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rkS-hn-HzX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="MiI-ZU-sQP"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="MiI-ZU-sQP">
+                    <connections>
+                        <action selector="back:" destination="6h1-fv-fKH" id="KRc-LZ-SxS"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-291.304347826087" y="874.55357142857144"/>
         </scene>
@@ -235,10 +239,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heavy" translatesAutoresizingMaskIntoConstraints="NO" id="Xsb-Cv-gQW">
-                                        <rect key="frame" x="164" y="81" width="87" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="__________________________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyf-zj-jcw">
                                         <rect key="frame" x="-5" y="57" width="419" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -266,6 +266,10 @@
                                             <action selector="btnBack:" destination="1cd-fg-Gng" eventType="touchUpInside" id="oF1-nf-Mn0"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RainIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Xsb-Cv-gQW">
+                                        <rect key="frame" x="145" y="52" width="125" height="144"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
@@ -289,7 +293,7 @@
                     </connections>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="343" y="875"/>
+            <point key="canvasLocation" x="340.57971014492756" y="874.55357142857144"/>
         </scene>
         <!--Water-->
         <scene sceneID="Swh-sg-R11">
@@ -303,10 +307,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drop" translatesAutoresizingMaskIntoConstraints="NO" id="YrG-RC-QEj">
-                                        <rect key="frame" x="162" y="76" width="87" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Touch." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pJ-aN-cGs">
                                         <rect key="frame" x="169" y="433" width="73" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -333,6 +333,10 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WaterIcon" translatesAutoresizingMaskIntoConstraints="NO" id="YrG-RC-QEj">
+                                        <rect key="frame" x="146" y="57" width="126" height="137"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
@@ -349,7 +353,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HgH-zV-Uku" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="uaU-gv-GXd"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="uaU-gv-GXd">
+                    <connections>
+                        <action selector="back:" destination="UMH-uG-Icb" id="lCU-LD-8IX"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1651" y="875"/>
         </scene>
@@ -365,10 +373,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="leaf" translatesAutoresizingMaskIntoConstraints="NO" id="meF-gi-IMK">
-                                        <rect key="frame" x="158" y="90" width="98" height="87"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aok-n9-1wU">
                                         <rect key="frame" x="8" y="46" width="30" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -399,6 +403,10 @@
                                             <outletCollection property="gestureRecognizers" destination="QYE-9T-eSo" appends="YES" id="O4J-P8-XlS"/>
                                         </connections>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LeafIcon" translatesAutoresizingMaskIntoConstraints="NO" id="meF-gi-IMK">
+                                        <rect key="frame" x="144" y="57" width="126" height="133"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
@@ -422,20 +430,20 @@
                 <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="QYE-9T-eSo">
                     <rectEdge key="edges" left="YES"/>
                     <connections>
-                        <action selector="back:" destination="d55-tV-Kyn" id="gDD-c7-DF1"/>
+                        <action selector="back:" destination="d55-tV-Kyn" id="uyq-xm-eVk"/>
                     </connections>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="983" y="875"/>
+            <point key="canvasLocation" x="982.60869565217399" y="874.55357142857144"/>
         </scene>
     </scenes>
     <resources>
         <image name="Beach1" width="257" height="257"/>
         <image name="Forest-1" width="257" height="257"/>
         <image name="Gate1" width="414" height="246"/>
+        <image name="LeafIcon" width="364" height="364"/>
         <image name="Lock" width="91" height="169"/>
-        <image name="drop" width="512" height="512"/>
-        <image name="heavy" width="512" height="512"/>
-        <image name="leaf" width="512" height="512"/>
+        <image name="RainIcon" width="364" height="364"/>
+        <image name="WaterIcon" width="364" height="364"/>
     </resources>
 </document>
