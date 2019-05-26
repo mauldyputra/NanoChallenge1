@@ -31,7 +31,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azZ-wH-f8K">
-                                        <rect key="frame" x="280" y="386" width="95" height="100"/>
+                                        <rect key="frame" x="278" y="386" width="95" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="btnBeach" image="Beach1"/>
                                         <connections>
@@ -47,21 +47,21 @@
                                             <segue destination="d55-tV-Kyn" kind="show" identifier="leafPage" id="Xgd-bk-kba"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ja2-5T-U3p">
+                                        <rect key="frame" x="208" y="510" width="132" height="139"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="btnWater" image="WaterIcon"/>
+                                        <connections>
+                                            <action selector="waterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Cx-sd-JM1"/>
+                                            <segue destination="UMH-uG-Icb" kind="show" identifier="waterPage" id="y4r-IP-FxD"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bn9-Dm-sIb">
                                         <rect key="frame" x="138" y="248" width="139" height="147"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="btnRain" image="RainIcon"/>
                                         <connections>
                                             <segue destination="1cd-fg-Gng" kind="show" id="b9n-ag-nSS"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ja2-5T-U3p">
-                                        <rect key="frame" x="216" y="511" width="132" height="139"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="btnWater" image="WaterIcon"/>
-                                        <connections>
-                                            <action selector="waterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Cx-sd-JM1"/>
-                                            <segue destination="UMH-uG-Icb" kind="show" identifier="waterPage" id="y4r-IP-FxD"/>
                                         </connections>
                                     </button>
                                 </subviews>

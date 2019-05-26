@@ -19,6 +19,8 @@
 		8B7FDC18228D38260072F2A6 /* Wind Sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8B7FDC13228D38250072F2A6 /* Wind Sound.wav */; };
 		8B7FDC19228D38260072F2A6 /* Sea Wave.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8B7FDC14228D38260072F2A6 /* Sea Wave.wav */; };
 		8B7FDC1B228D3D4D0072F2A6 /* waterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FDC1A228D3D4D0072F2A6 /* waterViewController.swift */; };
+		8B810058229B0661003385A4 /* Logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B810057229B0661003385A4 /* Logo1.png */; };
+		8B81005A229B06B7003385A4 /* Logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B810059229B06B7003385A4 /* Logo2.png */; };
 		8BA8D812229231EF00859393 /* BeachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA8D811229231EF00859393 /* BeachViewController.swift */; };
 		8BA8D81422924AB400859393 /* customAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA8D81322924AB400859393 /* customAnimation.swift */; };
 		8BA8D818229268AC00859393 /* Sea Waves.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8BA8D817229268AC00859393 /* Sea Waves.wav */; };
@@ -44,6 +46,8 @@
 		8B7FDC13228D38250072F2A6 /* Wind Sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Wind Sound.wav"; sourceTree = "<group>"; };
 		8B7FDC14228D38260072F2A6 /* Sea Wave.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Sea Wave.wav"; sourceTree = "<group>"; };
 		8B7FDC1A228D3D4D0072F2A6 /* waterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waterViewController.swift; sourceTree = "<group>"; };
+		8B810057229B0661003385A4 /* Logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo1.png; path = ../../../../Downloads/Icons/Logo1.png; sourceTree = "<group>"; };
+		8B810059229B06B7003385A4 /* Logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo2.png; path = ../../../../Downloads/Icons/Logo2.png; sourceTree = "<group>"; };
 		8BA8D811229231EF00859393 /* BeachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachViewController.swift; sourceTree = "<group>"; };
 		8BA8D81322924AB400859393 /* customAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customAnimation.swift; sourceTree = "<group>"; };
 		8BA8D817229268AC00859393 /* Sea Waves.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Sea Waves.wav"; path = "../../../../Downloads/Sea Waves.wav"; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				8B7FDBB2228BB7DC0072F2A6 /* Assets.xcassets */,
 				8B7FDBB4228BB7DC0072F2A6 /* LaunchScreen.storyboard */,
 				8B7FDBB7228BB7DC0072F2A6 /* Info.plist */,
+				8B810059229B06B7003385A4 /* Logo2.png */,
+				8B810057229B0661003385A4 /* Logo1.png */,
 				8BF02E0E229192F500B42482 /* Emitter.swift */,
 				8BA8D81322924AB400859393 /* customAnimation.swift */,
 			);
@@ -184,6 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B810058229B0661003385A4 /* Logo1.png in Resources */,
 				8B7FDBB6228BB7DC0072F2A6 /* LaunchScreen.storyboard in Resources */,
 				8B7FDC18228D38260072F2A6 /* Wind Sound.wav in Resources */,
 				8BA8D818229268AC00859393 /* Sea Waves.wav in Resources */,
@@ -194,6 +201,7 @@
 				8B7FDC15228D38260072F2A6 /* Water Drop.wav in Resources */,
 				8B7FDC16228D38260072F2A6 /* Rain Sound.wav in Resources */,
 				8B7FDBB1228BB7DA0072F2A6 /* Main.storyboard in Resources */,
+				8B81005A229B06B7003385A4 /* Logo2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
