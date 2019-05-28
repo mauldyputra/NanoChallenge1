@@ -30,6 +30,9 @@ class BeachViewController: UIViewController {
         for i in 0..<imagesNames.count{
             images.append(UIImage(named: imagesNames[i])!)
         }
+        self.gateView.animationImages = self.images
+        self.gateView.animationDuration = 1
+        self.gateView.animationRepeatCount = 1
 //        beginFaceID()
     }
     
@@ -45,14 +48,16 @@ class BeachViewController: UIViewController {
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To have an access to the door we need to check your FaceID") { (wasSuccessful, error) in
                 if wasSuccessful{
 //                    self.dismiss(animated: true, completion: nil)
-                    
-                    self.gateView.animationImages = self.images
-                    self.gateView.animationDuration = 1
-                    self.gateView.animationRepeatCount = 1
-                    self.scanFID.alpha = 0
-                    self.gateView.startAnimating()
-                    self.gateView.image = self.images.last
-                    self.playSound()
+                    DispatchQueue.main.async {
+                        self.gateView.startAnimating()
+                        self.scanFID.alpha = 0
+                        self.gateView.image = self.images.last
+                        self.playSound()
+                    }
+//                    self.gateView.startAnimating()
+//                    self.scanFID.alpha = 0
+//                    self.gateView.image = self.images.last
+//                    self.playSound()
                 }else{
                     Alert.showBasic(title: "Incorrect credentials", msg: "Please try again", vc: self)
                 }

@@ -22,5 +22,18 @@ class ViewController: UIViewController {
     @IBAction func leafPressed(_ sender: Any) {
         performSegue(withIdentifier: "leafPage", sender: self)
     }
+    
+    @IBAction func rainPressed(_ sender: Any) {
+        performSegue(withIdentifier: "rainPage", sender: self)
+    }
+    
+    @IBAction func beachPressed(_ sender: Any) {
+        performSegue(withIdentifier: "beachPage", sender: self)
+    }
+    
+    
+    @IBAction func forestPressed(_ sender: Any) {
+        performSegue(withIdentifier: "forestPage", sender: self)
+    }
 }
 

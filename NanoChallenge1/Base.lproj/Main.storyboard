@@ -27,7 +27,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="btnForest" image="Forest-1"/>
                                         <connections>
-                                            <segue destination="dvL-pa-daL" kind="show" id="2yK-xE-xeD"/>
+                                            <segue destination="dvL-pa-daL" kind="show" identifier="forestPage" id="2yK-xE-xeD"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azZ-wH-f8K">
@@ -35,7 +35,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="btnBeach" image="Beach1"/>
                                         <connections>
-                                            <segue destination="6h1-fv-fKH" kind="show" id="pex-dI-7Sr"/>
+                                            <segue destination="6h1-fv-fKH" kind="show" identifier="beachPage" id="pex-dI-7Sr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjR-79-u9J">
@@ -61,7 +61,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="btnRain" image="RainIcon"/>
                                         <connections>
-                                            <segue destination="1cd-fg-Gng" kind="show" id="b9n-ag-nSS"/>
+                                            <segue destination="1cd-fg-Gng" kind="show" identifier="rainPage" id="b9n-ag-nSS"/>
                                         </connections>
                                     </button>
                                 </subviews>

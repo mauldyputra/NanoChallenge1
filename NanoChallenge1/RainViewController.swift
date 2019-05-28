@@ -30,7 +30,7 @@ class RainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gyro()
+//        gyro()
         screenEdgeRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(RainViewController.back(_:)))
         screenEdgeRecognizer.edges = .left
         view.addGestureRecognizer(screenEdgeRecognizer)
@@ -40,7 +40,7 @@ class RainViewController: UIViewController {
         return 180 / .pi * radians
     }
     override func viewDidAppear(_ animated: Bool) {
-//        gyro()
+        gyro()
 //        rainDown()
 //        playSound()
     }
@@ -81,9 +81,9 @@ class RainViewController: UIViewController {
 //                        customAnim.springMovement(view: mUI)
 //                    }
 //                }
-                for _ in 0...600{
-                    createBuble()
-                }
+//                for _ in 0...600{
+//                    createBuble()
+//                }
                 rainDown()
                 playSound()
                 lay = true
@@ -94,27 +94,27 @@ class RainViewController: UIViewController {
 //            playSound()
         }
     }
-    @objc func updateTimer() {
-        if seconds <= 600{
-            customAnim.fadeOut(view: listCircle[seconds])
-            seconds += 1
-        }
-        
-    }
-    
-    func createBuble(){
-        let randomX = Int.random(in: 1...400)
-        let randomY = Int.random(in: 1...1000)
-        let myNewView=UIView(frame: CGRect(x: randomX, y: randomY, width: 30, height: 30))
-        // Change UIView background colour
-        customAnim.changeColor(view: myNewView)
-        // Add rounded corners to UIView
-        myNewView.layer.cornerRadius=myNewView.frame.size.width/2
-        myNewView.clipsToBounds = true
-        
-        // Add UIView as a Subview
-        self.listCircle.append(myNewView)
-    }
+//    @objc func updateTimer() {
+//        if seconds <= 600{
+//            customAnim.fadeOut(view: listCircle[seconds])
+//            seconds += 1
+//        }
+//
+//    }
+//
+//    func createBuble(){
+//        let randomX = Int.random(in: 1...400)
+//        let randomY = Int.random(in: 1...1000)
+//        let myNewView=UIView(frame: CGRect(x: randomX, y: randomY, width: 30, height: 30))
+//        // Change UIView background colour
+//        customAnim.changeColor(view: myNewView)
+//        // Add rounded corners to UIView
+//        myNewView.layer.cornerRadius=myNewView.frame.size.width/2
+//        myNewView.clipsToBounds = true
+//
+//        // Add UIView as a Subview
+//        self.listCircle.append(myNewView)
+//    }
     
     func playSound(){
         let path = Bundle.main.path(forResource: "Rain Sound.wav", ofType:nil)!
@@ -150,11 +150,13 @@ class RainViewController: UIViewController {
     
     @IBAction func back(_ sender: UIScreenEdgePanGestureRecognizer) {
         if sender.state == .ended{
+            motion.stopDeviceMotionUpdates()
             dismiss(animated: true, completion: nil)
         }
     }
     
     @IBAction func btnBack(_ sender: Any) {
+       motion.stopDeviceMotionUpdates()
             dismiss(animated: true, completion: nil)
     }
 }
